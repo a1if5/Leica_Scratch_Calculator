@@ -88,14 +88,14 @@ export default function AddInput({ submitHandler }) {
   // };
 
 
-  console.log(value + "wooo")
+  // console.log(value + "wooo")
   return (
     <ComponentContainer>
 
       <InputContainer>
-        <Input placeholder="Code" keyboardType="number-pad" returnKeyType="done" onSubmitEditing={x => onChangeText(x.nativeEvent.text)} />
-        <Input placeholder="Length" keyboardType="number-pad" returnKeyType="done" onSubmitEditing={x => onChangeText1(x.nativeEvent.text)} />
-        <Input placeholder="Count" keyboardType="number-pad" returnKeyType="done" onSubmitEditing={x => onChangeText2(x.nativeEvent.text)} />
+        <Input placeholder="Code" ref={input => { this.textInput = input }} keyboardType="number-pad" returnKeyType="done" onSubmitEditing={x => onChangeText(x.nativeEvent.text)} />
+        <Input placeholder="Length" ref={input => { this.textInput1 = input }} keyboardType="number-pad" returnKeyType="done" onSubmitEditing={x => onChangeText1(x.nativeEvent.text)} />
+        <Input placeholder="Count" ref={input => { this.textInput2 = input }} keyboardType="number-pad" returnKeyType="done" onSubmitEditing={x => onChangeText2(x.nativeEvent.text)} />
       </InputContainer>
       <SubmitButton
         onPress={() => {
@@ -108,6 +108,11 @@ export default function AddInput({ submitHandler }) {
             setValue(temp)
             setValue(submitHandler(value));
             setValue(lol)
+            if (this.textInput == null || this.textInput1 == null || this.textInput2 == null) {
+              this.textInput.clear()
+              this.textInput1.clear()
+              this.textInput2.clear()
+            }
           }
         }}
       >
