@@ -4,10 +4,7 @@ import styled from "styled-components";
 export default function Empty() {
   return (
     <ComponentContainer>
-      <EmptyImage
-        source={require("../assets/images/emptytodo-removebg-preview.png")}
-      />
-      <EmptyText>Add To-Do.</EmptyText>
+
     </ComponentContainer>
   );
 }
