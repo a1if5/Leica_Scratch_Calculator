@@ -5,7 +5,7 @@ import { View, StatusBar, FlatList, Text, StyleSheet, TextInput } from "react-na
 import { AntDesign } from "@expo/vector-icons";
 // import { lensDiameter } from "../App.js"
 export default function AddInput({ submitHandler }) {
-  const [value, setValue] = useState([]);
+  const [value, setValue] = useState([null, null, null, null]);
 
   // console.log(lensDiameter)
 
@@ -23,45 +23,52 @@ export default function AddInput({ submitHandler }) {
   // };
   function onChangeText1(text) {
     // console.log(value[1] + "wooo")
-    var temp = []
-    if (value == null) {
-
-    }
-    // else if (value[1].length > 0) {
-    //   console.log("wee")
-    //   value.splice(value[1], 1)
+    var temp = [0, 0, 0, 0]
+    temp[0] = value[0]
+    temp[1] = text
+    temp[2] = value[2]
+    // if (value == null) {
+    // }
+    // else {
     //   temp = value
     // }
-
-    else {
-      temp = value
-    }
-    temp.push(text)
+    // temp.push(text)
     setValue(temp);
     console.log(value)
 
   };
   function onChangeText2(text) {
-    var temp = []
-    if (value == null) {
+    var temp = [0, 0, 0, 0]
+    temp[0] = value[0]
+    temp[1] = value[1]
+    temp[2] = text
+    // if (value == null) {
 
-    } else {
-      temp = value
-    }
-    temp.push(text)
+    // } else {
+    //   temp = value
+    // }
+    // temp.push(text)
     setValue(temp);
     console.log(value)
 
   };
 
   function onChangeText(text) {
-    var temp = []
-    if (value == null) {
+    var temp = [0, 0, 0, 0]
+    // if (value[0] == null) {
+    temp[0] = text
+    temp[1] = value[1]
+    temp[2] = value[2]
+    // } else {
 
-    } else {
-      temp = value
-    }
-    temp.push(text)
+    // }
+
+    // if (value == null) {
+
+    // } else {
+    //   temp = value
+    // }
+    // temp.push(text)
     setValue(temp);
     console.log(value)
 
@@ -81,7 +88,7 @@ export default function AddInput({ submitHandler }) {
   // };
 
 
-  // console.log(value + "gggg")
+  console.log(value + "wooo")
   return (
     <ComponentContainer>
 
@@ -93,12 +100,14 @@ export default function AddInput({ submitHandler }) {
       <SubmitButton
         onPress={() => {
           var temp = []
+          var lol = [0, 0, 0, 0]
           if (value == null) {
           } else {
             temp = value
-            temp.push(parseInt(value[0]) * parseInt(value[1]) * parseInt(value[2]))
+            temp[3] = (parseInt(value[0]) * parseInt(value[1]) * parseInt(value[2]))
             setValue(temp)
             setValue(submitHandler(value));
+            setValue(lol)
           }
         }}
       >
