@@ -139,6 +139,8 @@ const styles = StyleSheet.create({
   rejectText: {
     color: "red",
     fontWeight: "bold",
+    fontSize: 30,
+
   },
   sumText: {
     fontSize: 70,
