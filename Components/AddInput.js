@@ -108,11 +108,11 @@ export default function AddInput({ submitHandler }) {
             setValue(temp)
             setValue(submitHandler(value));
             setValue(lol)
-            if (this.textInput == null || this.textInput1 == null || this.textInput2 == null) {
-              this.textInput.clear()
-              this.textInput1.clear()
-              this.textInput2.clear()
-            }
+            // if (this.textInput == null || this.textInput1 == null || this.textInput2 == null) {
+            this.textInput.clear()
+            this.textInput1.clear()
+            this.textInput2.clear()
+            // }
           }
         }}
       >
