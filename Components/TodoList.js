@@ -35,6 +35,10 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     // width: windowWidth * 0.9,
   },
+  boldText: {
+    fontSize: 20,
+    fontWeight: "bold",
+  },
   detailsContainer: {
     backgroundColor: "whitesmoke",
     flexDirection: "row",

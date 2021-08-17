@@ -93,9 +93,9 @@ export default function AddInput({ submitHandler }) {
     <ComponentContainer>
 
       <InputContainer>
-        <Input placeholder="Code" ref={input => { this.textInput = input }} keyboardType="number-pad" returnKeyType="done" onSubmitEditing={x => onChangeText(x.nativeEvent.text)} />
-        <Input placeholder="Length" ref={input => { this.textInput1 = input }} keyboardType="number-pad" returnKeyType="done" onSubmitEditing={x => onChangeText1(x.nativeEvent.text)} />
-        <Input placeholder="Count" ref={input => { this.textInput2 = input }} keyboardType="number-pad" returnKeyType="done" onSubmitEditing={x => onChangeText2(x.nativeEvent.text)} />
+        <Input placeholder="Code" ref={input => { this.textInput = input }} keyboardType="number-pad" returnKeyType="done" onChangeText={x => onChangeText(x)} />
+        <Input placeholder="Length" ref={input => { this.textInput1 = input }} keyboardType="number-pad" returnKeyType="done" onChangeText={x => onChangeText1(x)} />
+        <Input placeholder="Count" ref={input => { this.textInput2 = input }} keyboardType="number-pad" returnKeyType="done" onChangeText={x => onChangeText2(x)} />
       </InputContainer>
       <SubmitButton
         onPress={() => {

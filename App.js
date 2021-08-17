@@ -62,15 +62,15 @@ export default function App() {
 
 
         <View style={styles.centralise}>
-
+          <Text style={styles.mainText}>Leica Military Calculator</Text>
           <View style={styles.flexcontainer}>
             <View style={styles.flexleft}>
-              <Text style={styles.textt}>Lens Diameter</Text>
-              <TextInput style={styles.inputBox} keyboardType="number-pad" returnKeyType="done" onSubmitEditing={x => setLensDiameter(x.nativeEvent.text)}></TextInput>
+              <Text style={styles.headText}>Lens Diameter</Text>
+              <TextInput style={styles.inputBox} keyboardType="number-pad" returnKeyType="done" onChangeText={x => setLensDiameter(x)}></TextInput>
             </View>
             <View style={styles.flexright}>
-              <Text style={styles.textt}>Scratch Code</Text>
-              <TextInput style={styles.inputBox} keyboardType="number-pad" returnKeyType="done" onSubmitEditing={x => setScratchCode(x.nativeEvent.text)}></TextInput>
+              <Text style={styles.headText}>Scratch Code</Text>
+              <TextInput style={styles.inputBox} keyboardType="number-pad" returnKeyType="done" onChangeText={x => setScratchCode(x)}></TextInput>
             </View>
           </View>
 
@@ -229,6 +229,19 @@ const styles = StyleSheet.create({
   },
   textt: {
     fontSize: 30,
+    color: "white",
+    textAlign: "center",
+  },
+  mainText: {
+    fontSize: 40,
+    color: "white",
+    textAlign: "center",
+    paddingTop: 10,
+    paddingBottom: 20,
+    // fontWeight: "bold",
+  },
+  headText: {
+    fontSize: 25,
     color: "white",
     textAlign: "center",
   },
