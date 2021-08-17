@@ -62,7 +62,7 @@ export default function App() {
 
 
         <View style={styles.centralise}>
-          <Text style={styles.mainText}>Leica Military Calculator</Text>
+          {/* <Text style={styles.mainText}>Leica Military Calculator</Text> */}
           <View style={styles.flexcontainer}>
             <View style={styles.flexleft}>
               <Text style={styles.headText}>Lens Diameter</Text>
